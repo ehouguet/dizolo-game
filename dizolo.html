@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    
+        <style>
+            #plateau {
+                position: fixed;
+                top: 10vh;
+                left: 0;
+                height: 90vh;
+                width: 100vw;
+                background-color: black;
+            }
+            #current-player {
+                height: 80px;
+                width: 80px;
+                font-size: 2em;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <table>
+                <tr>
+                    <button id="current-player">j1</button>
+                </tr>
+            </table>
+            <svg id="plateau"></svg>
+        </div>
+        <script src="./node_module/d3/d3.js"></script>
+        <script src="./player.js"></script>
+        <script src="./tuile.js"></script>
+        <script src="./tuileDrawer.js"></script>
+        <script src="./reserve.js"></script>
+        <script src="./dizolo.js"></script>
+        <script>            
+            let domPlateau = document.getElementById("plateau");
+            let dizaloInst = new Dizolo(domPlateau);
+        </script>
+    </body>
+</html>
